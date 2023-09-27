@@ -3,7 +3,8 @@ package cucumberOptions;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
-@CucumberOptions(features="src/test/java/features/searchProduct.feature", glue="stepDefinitions", monochrome=true)
+@CucumberOptions(features="src/test/java/features/searchProduct.feature", glue="stepDefinitions", 
+monochrome=false)
 public class SearchProductTestNGRunner extends AbstractTestNGCucumberTests {
 	
 
