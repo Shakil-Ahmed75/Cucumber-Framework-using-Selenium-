@@ -27,7 +27,7 @@ public class GreenCartStepDefinitions {
 		driver.findElement(By.xpath("//input[@placeholder='Search for Vegetables and Fruits']")).sendKeys(shortName);
 		Thread.sleep(3000);
 		landingpageProductName = driver.findElement(By.cssSelector("h4.product-name")).getText().split("-")[0].trim();
-		System.out.println(landingpageProductName + "is extracted from HomePage");
+		System.out.println(landingpageProductName + " is extracted from HomePage");
 	}
 
 	@Then("User searched for {string} shortname in offers page")
@@ -46,7 +46,7 @@ public class GreenCartStepDefinitions {
 	}
 
 	@Then("validate product name in offers page matches with Landing page")
-	public void validate_product_name_in_offers_page_matches_with_Landing_page(String shortName) {
+	public void validate_product_name_in_offers_page_matches_with_Landing_page() {
         
 		Assert.assertEquals(offerpageProductName, landingpageProductName);
 		
