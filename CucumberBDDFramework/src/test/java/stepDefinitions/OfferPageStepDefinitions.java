@@ -11,13 +11,16 @@ import io.cucumber.java.en.Then;
 import pageObjectModel.LandingPage;
 import pageObjectModel.OfferPage;
 import pageObjectModel.PageObjectManager;
+import utils.GenericUtils;
 import utils.TestContextSetup;
 
 public class OfferPageStepDefinitions {
 	public WebDriver driver;
 	public String offerpageProductName;
 	public PageObjectManager pageObjectManager;
+	public GenericUtils genericUtils;
 	TestContextSetup textContextSetup;
+	
 
 	public OfferPageStepDefinitions(TestContextSetup textContextSetup) {
 		this.textContextSetup = textContextSetup;
@@ -41,11 +44,7 @@ public class OfferPageStepDefinitions {
 		   // pageObjectManager = new PageObjectManager(textContextSetup.driver);
 			LandingPage landingPage = textContextSetup.pageObjectManager.getLandingPage();
 			landingPage.selectedTopDeals();
-			Set<String> s1 = textContextSetup.driver.getWindowHandles();
-			Iterator<String> i1 = s1.iterator();
-			String parentWindow = i1.next();
-			String childWindow = i1.next();
-			textContextSetup.driver.switchTo().window(childWindow);
+			textContextSetup.genericUtils.SwitchWindowToChild();
 		//explicit wait, parse string
 		
 		
