@@ -13,6 +13,7 @@ public class LandingPageStepDefinitions {
 	public WebDriver driver;
 	public String landingPageProductName;
 	public String offerpageProductName;
+	public LandingPage landingPage;
 	TestContextSetup textContextSetup;
 
 	public LandingPageStepDefinitions(TestContextSetup textContextSetup) {
@@ -21,13 +22,12 @@ public class LandingPageStepDefinitions {
 
 	@Given("User is on greenCart Landing Page")
 	public void user_is_on_green_cart_landing_page() {
-		textContextSetup.driver = new ChromeDriver();
-		textContextSetup.driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
+
 	}
 
-	@When("user search shortname {string} and extracted actual name of product")
+	@When("^user search shortname (.+) and extracted actual name of product $")
 	public void user_search_short_name_and_extracted_actual_name_of_product(String shortName) throws InterruptedException {
-		LandingPage landingPage = textContextSetup.pageObjectManager.getLandingPage();
+		//LandingPage landingPage = textContextSetup.pageObjectManager.getLandingPage();
 		landingPage.searchItrem(shortName);	
 	    Thread.sleep(3000);
 		textContextSetup.landingpageProductName = landingPage.getProductName().split("-")[0].trim();

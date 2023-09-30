@@ -26,7 +26,7 @@ public class OfferPageStepDefinitions {
 		this.textContextSetup = textContextSetup;
 	}
 
-	@Then("User searched for {string} shortname in offers page")
+	@Then("^User searched for (.+) shortname in offers page $")
 	public void user_searched_for_same_shorted_name_in_offers_page(String shortName) throws InterruptedException {
 
 		switchToOffersPage();
