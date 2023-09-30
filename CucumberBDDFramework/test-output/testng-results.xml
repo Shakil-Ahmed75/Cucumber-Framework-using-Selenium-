@@ -2,26 +2,26 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-28T17:09:22 BDT" name="Default suite" finished-at="2023-09-28T17:09:36 BDT" duration-ms="13879">
+  <suite started-at="2023-09-30T23:56:06 BDT" name="Default suite" finished-at="2023-09-30T23:56:18 BDT" duration-ms="12232">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.SearchProductTestNGRunner@413d1baf]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-09-28T17:09:22 BDT" name="Default test" finished-at="2023-09-28T17:09:36 BDT" duration-ms="13879">
+    <test started-at="2023-09-30T23:56:06 BDT" name="Default test" finished-at="2023-09-30T23:56:18 BDT" duration-ms="12232">
       <class name="cucumberOptions.SearchProductTestNGRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumberOptions.SearchProductTestNGRunner@413d1baf]" started-at="2023-09-28T17:09:22 BDT" name="setUpClass" finished-at="2023-09-28T17:09:23 BDT" duration-ms="440" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumberOptions.SearchProductTestNGRunner@413d1baf]" started-at="2023-09-30T23:56:06 BDT" name="setUpClass" finished-at="2023-09-30T23:56:06 BDT" duration-ms="468" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@f6de586]]>
+                <![CDATA[org.testng.TestRunner@57562473]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.SearchProductTestNGRunner@413d1baf]" started-at="2023-09-28T17:09:23 BDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-09-28T17:09:36 BDT" duration-ms="13339" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.SearchProductTestNGRunner@413d1baf]" started-at="2023-09-30T23:56:06 BDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-09-30T23:56:18 BDT" duration-ms="11591" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -34,52 +34,21 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@placeholder='Search for Vegetables and Fruits']"}
-  (Session info: chrome=117.0.5938.92)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.12.1', revision: '8e34639b11'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e5cd5727206fa10f89a2bb6bfe8e9dac, findElement {using=xpath, value=//input[@placeholder='Search for Vegetables and Fruits']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.92, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: C:\Users\SHAKIL~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:12907}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:12907/devtoo..., se:cdpVersion: 117.0.5938.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: e5cd5727206fa10f89a2bb6bfe8e9dac]]>
+              <![CDATA[Cannot invoke "pageObjectModel.PageObjectManager.getLandingPage()" because "this.textContextSetup.pageObjectManager" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@placeholder='Search for Vegetables and Fruits']"}
-  (Session info: chrome=117.0.5938.92)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.12.1', revision: '8e34639b11'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e5cd5727206fa10f89a2bb6bfe8e9dac, findElement {using=xpath, value=//input[@placeholder='Search for Vegetables and Fruits']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.92, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: C:\Users\SHAKIL~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:12907}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:12907/devtoo..., se:cdpVersion: 117.0.5938.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: e5cd5727206fa10f89a2bb6bfe8e9dac
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-at pageObjectModel.OfferPage.searchItrem(OfferPage.java:19)
-at stepDefinitions.OfferPageStepDefinitions.user_searched_for_same_shorted_name_in_offers_page(OfferPageStepDefinitions.java:29)
-at ✽.User searched for "Tom" shortname in offers page(file:///C:/Users/ShakilAhmed/git/Cucumber-Framework-using-Selenium-/CucumberBDDFramework/src/test/java/features/searchProduct.feature:6)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "pageObjectModel.PageObjectManager.getLandingPage()" because "this.textContextSetup.pageObjectManager" is null
+at stepDefinitions.LandingPageStepDefinitions.user_search_short_name_and_extracted_actual_name_of_product(LandingPageStepDefinitions.java:30)
+at ✽.user search shortname "Tom" and extracted actual name of product(file:///C:/Users/ShakilAhmed/git/Cucumber-Framework-using-Selenium-/CucumberBDDFramework/src/test/java/features/searchProduct.feature:5)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumberOptions.SearchProductTestNGRunner@413d1baf]" started-at="2023-09-28T17:09:36 BDT" name="tearDownClass" finished-at="2023-09-28T17:09:36 BDT" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumberOptions.SearchProductTestNGRunner@413d1baf]" started-at="2023-09-30T23:56:18 BDT" name="tearDownClass" finished-at="2023-09-30T23:56:18 BDT" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

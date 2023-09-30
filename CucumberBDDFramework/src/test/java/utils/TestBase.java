@@ -14,10 +14,10 @@ public class TestBase {
 
 	public WebDriver WebDriverManager() throws IOException {
 		
-		FileInputStream fis= new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\resources\\global.properties");
+		FileInputStream fis= new FileInputStream(System.getProperty("user.dir")+"//src//test//resources//global.properties");
 		Properties prop = new Properties();
 		prop.load(fis);
-		String url = prop.getProperty("QAURL");
+		String url = prop.getProperty("QAUrl");
 		
 		 if(driver == null) 
 		 {
@@ -31,7 +31,7 @@ public class TestBase {
 			 {
 				 
 			 }
-		  //driver.get(url);
+		  driver.get(url);
 		 }
 		 
 		return driver;
