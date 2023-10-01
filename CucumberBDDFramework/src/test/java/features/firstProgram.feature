@@ -1,21 +1,17 @@
-Feature: Appication Loging
-  I want to use this template for my feature file
-@RegressionTest
-  Scenario: Admin Page default login
-    Given user is on netBanking landing Page
-    When user login into application with "admin" and password 123456
-    Then Home Page is displayed
-    And cards are displayed
+Feature: Search and Place the order for Products
+@OffersPage
+Scenario Outline: Search Experience for product search in both home and Offers page
 
-  #Reusability
-  @SmokeTest
-  Scenario: user Page default login
-    Given user is on netBanking landing Page
-    When user login into application with <username> and password <password>
-    Then Home Page is displayed
-    And cards are displayed
-  Examples: 
-  | username | password |
-  | shakil   | 12345678 |
-  | rahim    | 32165487 |
-    
+Given User is on GreenCart Landing page
+When user searched with Shortname <Name> and extracted actual name of product
+Then user searched for <Name> shortname in offers page
+And  validate product name in offers page matches with Landing Page
+
+Examples:
+| Name  |
+| Tom 	|
+| Beet  |
+
+
+
+

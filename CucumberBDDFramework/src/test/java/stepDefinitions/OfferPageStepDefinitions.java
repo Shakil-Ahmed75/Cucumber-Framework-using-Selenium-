@@ -9,42 +9,42 @@ import org.testng.Assert;
 
 import io.cucumber.java.en.Then;
 import pageObjectModel.LandingPage;
-import pageObjectModel.OfferPage;
+import pageObjectModel.OffersPage;
 import pageObjectModel.PageObjectManager;
 import utils.GenericUtils;
 import utils.TestContextSetup;
 
 public class OfferPageStepDefinitions {
 	public WebDriver driver;
-	public String offerpageProductName;
+	public String OffersPageProductName;
 	public PageObjectManager pageObjectManager;
 	public GenericUtils genericUtils;
-	TestContextSetup textContextSetup;
+	TestContextSetup testContextSetup;
 	
 
-	public OfferPageStepDefinitions(TestContextSetup textContextSetup) {
-		this.textContextSetup = textContextSetup;
+	public OfferPageStepDefinitions(TestContextSetup testContextSetup) {
+		this.testContextSetup = testContextSetup;
 	}
 
-	@Then("^User searched for (.+) shortname in offers page $")
-	public void user_searched_for_same_shorted_name_in_offers_page(String shortName) throws InterruptedException {
+	
+	@Then("^user searched for (.+) shortname in offers page$")
+	public void user_searched_for_same_shortname_in_offers_page(String shortName) throws InterruptedException{
 
 		switchToOffersPage();
-		OfferPage offerPage = new OfferPage(textContextSetup.driver);
-		offerPage.searchItrem(shortName);
-		textContextSetup.driver.findElement(By.xpath("//input[@id='search-field']")).sendKeys(shortName);
+		OffersPage OffersPage = new OffersPage(testContextSetup.driver);
+		OffersPage.searchItrem(shortName);
 		Thread.sleep(3000);
-		offerpageProductName = offerPage.getProductName();
+		OffersPageProductName = OffersPage.getProductName();
 	}
 
 	public void switchToOffersPage()
 	{
 		//if switched to offer page-> skip below part
 		// offer -> enter-> text
-		   // pageObjectManager = new PageObjectManager(textContextSetup.driver);
-			LandingPage landingPage = textContextSetup.pageObjectManager.getLandingPage();
+		   // pageObjectManager = new PageObjectManager(testContextSetup.driver);
+			LandingPage landingPage = testContextSetup.pageObjectManager.getLandingPage();
 			landingPage.selectedTopDeals();
-			textContextSetup.genericUtils.SwitchWindowToChild();
+			testContextSetup.genericUtils.SwitchWindowToChild();
 		//explicit wait, parse string
 		
 		
@@ -53,7 +53,7 @@ public class OfferPageStepDefinitions {
 	@Then("validate product name in offers page matches with Landing page")
 	public void validate_product_name_in_offers_page_matches_with_Landing_page() {
 
-		Assert.assertEquals(offerpageProductName, textContextSetup.landingpageProductName);
+		Assert.assertEquals(OffersPageProductName, testContextSetup.landingpageProductName);
 
 	}
 

@@ -1,13 +1,17 @@
-Feature: Search and place the order for products
+Feature: Search and Place the order for Products
+@OffersPage
+Scenario Outline: Search Experience for product search in both home and Offers page
 
-  Scenario Outline: Search experience for product search in home and offers page
-    Given User is on greenCart Landing Page
-    When user search shortname <Name> and extracted actual name of product
-    Then User searched for <Name> shortname in offers page
-    And validate product name in offers page matches with Landing page
-    
-    Examples:
-    |Name |
-    |Tom |
-    |Tom |
-    
+Given User is on GreenCart Landing page
+When user searched with Shortname <Name> and extracted actual name of product
+Then user searched for <Name> shortname in offers page
+And  validate product name in offers page matches with Landing Page
+
+Examples:
+| Name  |
+| Tom 	|
+| Beet  |
+
+
+
+

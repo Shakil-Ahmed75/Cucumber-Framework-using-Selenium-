@@ -36,7 +36,7 @@ public class CheckoutPageStepDefinition {
 	{
 		
 		checkoutPage.CheckoutItems();
-		
+		//Assertion to extract name from screen and compare with name
 	}
 
 

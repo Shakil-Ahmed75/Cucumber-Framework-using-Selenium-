@@ -6,7 +6,7 @@ public class PageObjectManager {
 	public WebDriver driver;
 	public LandingPage landingPage;
 	public CheckoutPage checkoutPage;
-	public OfferPage offerPage; 
+	public OffersPage offerPage; 
 	
  public PageObjectManager(WebDriver driver) {
 	 this.driver =driver; 
@@ -16,8 +16,8 @@ public class PageObjectManager {
 	 landingPage = new  LandingPage(driver);
 	 return landingPage;
 }
- public OfferPage offerPage() {
-	   offerPage = new OfferPage(driver);
+ public OffersPage offerPage() {
+	   offerPage = new OffersPage(driver);
 	   return offerPage;
  }
  
